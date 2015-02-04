@@ -1,0 +1,18 @@
+<div class="pagination">
+    <check if="{{ @pagination['pageIndex'] > 1 }}">
+        <a href="{{ @page }}/{{ @pagination['pageIndex'] - 1 }}" class="button previous">Previous Page</a>
+    </check>
+    <div class="pages">
+        <set buttonsCount="6" startIndex="1" />
+        <loop from="{{ @i=@startIndex }}" to="{{ @i <= @buttonsCount }}" step="{{ @i++ }}">
+            <a href="{{ @page }}/{{ @i }}" class="{{ @pagination['pageIndex'] == @i ? 'active' : '' }}">{{ @i }}</a>
+        </loop>
+        <span>&hellip;</span>
+        <a href="{{ @page }}/{{ @pagination['pageCount'] }}" class="{{ @pagination['pageIndex'] == @pagination['pageCount'] ? 'active' : '' }}">
+            {{ @pagination['pageCount'] }}
+        </a>
+    </div>
+    <check if="{{ @pagination['pageIndex'] < @pagination['pageCount'] }}">
+        <a href="{{ @page }}/{{ @pagination['pageIndex'] + 1 }}" class="button next">Next Page</a>
+    </check>
+</div>

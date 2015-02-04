@@ -1,0 +1,44 @@
+<div id="sidebar" class="sidebar">
+
+
+    <!--&lt;!&ndash; Search &ndash;&gt;-->
+    <!--<section class="box search">-->
+        <!--<form method="post" action="#">-->
+            <!--<input type="text" class="text" name="search"-->
+                   <!--placeholder="Найти&hellip;"/>-->
+        <!--</form>-->
+    <!--</section>-->
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="#" class="icon fa-search">Найти&hellip;</a></li>
+            <repeat group="{{ @data['menu'] }} " value="{{ @item }}">
+                <li class="{{ @page == @item['path'] ? 'active' : '' }}">
+                    <switch expr="{{ @item['path'] }}">
+                        <case value="/category/news" break="true">
+                            <set cssClass="fa-newspaper-o" />
+                        </case>
+                        <case value="/category/analytics" break="true">
+                            <set cssClass="fa-bar-chart" />
+                        </case>
+                        <case value="/category/articles" break="true">
+                            <set cssClass="fa-quote-right" />
+                        </case>
+                        <case value="/contacts" break="true">
+                            <set cssClass="fa-envelope" />
+                        </case>
+                        <case value="/about" break="true">
+                            <set cssClass="fa-group" />
+                        </case>
+                        <default>
+                            <set cssClass=" " />
+                        </default>
+                    </switch>
+                    <a href="{{ @item['path'] }}"
+                       class="icon {{ $cssClass }}">{{ @item['text'] }}</a>
+                </li>
+            </repeat>
+        </ul>
+    </nav>
+</div>

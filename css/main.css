@@ -1,0 +1,172 @@
+/* Basic */
+/* ***************************************************************************** Basic */
+
+body {background-color: #4B4B4B;}
+
+body, input, textarea, select {
+	font: 14px/1.5em "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 300;
+	color: #565656;
+}
+
+#wrapper {position: relative;}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+/* Toolbar */
+/* ***************************************************************************** Toolbar */
+
+.toolbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	background: #fff;
+	box-shadow: 2.3px 4.4px 13px rgba(0,0,0,0.2);
+	z-index: 1000;
+}
+
+.toolbar > div {
+	padding-left: 14em;
+	position: relative;
+}
+
+.toolbar .inner {
+	padding-top:    10px;
+	padding-bottom: 10px;
+}
+
+/* Sidebar for navigation */
+/* ***************************************************************************** Sidebar for navigation */
+
+#sidebar form input,
+#sidebar form select,
+#sidebar form textarea {border: 0; }
+
+#sidebar section,
+#sidebar nav {position: relative; }
+
+#sidebar header {margin: 0 0 1.25em; }
+
+#sidebar section {margin: 2em 0 0;}
+
+#sidebar section:before,
+#sidebar nav:before {
+	height: 0.5em;
+	margin: 0 0 2em 0;
+}
+
+/*.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5,
+.sidebar h6,
+.sidebar strong,
+.sidebar b {color: #fff;}*/
+
+/* Sidebar A */
+/* ***************************************************************************** Sidebar A */
+
+.sidebar-a {
+	float: left;
+	width: 15em;
+	margin-left: -15em;
+	position: relative;
+	background: #f5f5f5;
+}
+
+/* Content */
+/* ***************************************************************************** Content */
+
+#content {
+	position: relative;
+	background: #fff;
+}
+
+#content > .inner {
+	position: relative;
+	z-index: 1;
+}
+
+.middle {
+	width: 100%;
+	position: relative;
+}
+
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
+.container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.main {padding: 0 15em 0 0;}
+
+/* Mobile UI */
+/* ***************************************************************************** */
+/* ***************************************************************************** Mobile UI */
+
+#titleBar {
+	background: #FFF;
+	box-shadow: 2.3px 4.4px 13px rgba(0, 0, 0, 0.2);
+}
+
+#titleBar .title {
+	display: block;
+	color: #000;
+	line-height: 60px;
+	font-size: 1.25em;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+#titleBar .toggle {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#titleBar .toggle:before {
+	background: #C94300;
+	color: #fff;
+	content: '\f0c9';
+	display: block;
+	font-size: 1.5em;
+	font-family: FontAwesome;
+	font-weight: 300;
+	text-decoration: none;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.skel-layers-exclusiveVisible #titleBar .toggle:before {
+	background: #E1E3E4;
+	color: #C94300;
+	content:"\f00d";
+	box-shadow: inset -3px 0 0 #c94300;
+	left: -10px;
+	padding-left: 10px;
+	width: 70px;
+}
+
+#sidePanel {background: #E1E3E4;}

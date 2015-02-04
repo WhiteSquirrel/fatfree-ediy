@@ -1,0 +1,53 @@
+
+body.is-loading * {
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	-o-transition: none !important;
+	-ms-transition: none !important;
+	transition: none !important;
+	-moz-animation: none !important;
+	-webkit-animation: none !important;
+	-o-animation: none !important;
+	-ms-animation: none !important;
+	animation: none !important;
+}
+
+a       {color: #41A9BE;}
+a:hover {color: #c94663;text-decoration: none;}
+
+strong, b,
+h2, h3, h4, h5, h6 {color: #232323;}
+
+strong, b          {font-weight: 700;}
+h2, h3, h4, h5, h6 {font-weight: 300;}
+
+h2 a, h3 a, h4 a, h5 a, h6 a {color: inherit;}
+
+blockquote {
+	border-left: solid 5px #ddd;
+	padding: 1em 0 1em 2em;
+	font-style: italic;
+}
+
+em, i {font-style: italic;}
+
+hr {
+	border: 0;
+	border-top: solid 1px #ddd;
+	padding: 1.5em 0 0 0;
+	margin: 1.75em 0 0 0;
+}
+
+sub {
+	position: relative;
+	top: 0.5em;
+	font-size: 0.8em;
+}
+
+sup {
+	position: relative;
+	top: -0.5em;
+	font-size: 0.8em;
+}
+
+p, ul, ol, dl, table {margin-bottom: 1em;}

@@ -1,0 +1,200 @@
+/* Toolbar */
+/* ***************************************************************************** Toolbar */
+
+/* Logo */
+/* ----------------------------------------------------------------------------- */
+
+a.logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	font-size: 2em;
+	height: 60px;
+	line-height: 60px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #696969;
+}
+
+a.logo:before {
+	background: #C94300;
+	color: #fff;
+	width: 60px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+a.logo > span        {padding: 0 10px;}
+a.logo > span > span {color: #c94300;}
+
+/* Kurs and Whether */
+/* ----------------------------------------------------------------------------- */
+
+.kurs,
+.kurs li,
+.whether,
+.whether li {
+	display: block;
+	margin: 0;
+	line-height: 40px;
+}
+
+.kurs    {float: right;}
+.whether {float: left;}
+
+.kurs li,
+.whether li {float: left;}
+
+.kurs li,
+.whether li {padding: 0 0.5em;}
+
+.kurs .fa-angle-up   {color: seagreen;}
+.kurs .fa-angle-down {color: darkred;}
+
+/* Sidebar for navigation */
+/* ***************************************************************************** Sidebar for navigation */
+
+.devices {
+	position: absolute;
+	font-size: 2em;
+	color: #FFF;
+	left: 15px;
+	bottom: 15px;
+}
+
+.devices span {
+	font-size: .4em;
+	padding-left: 10px;
+}
+
+/* Content */
+/* ***************************************************************************** Content */
+
+/* Slider */
+/* ----------------------------------------------------------------------------- */
+
+.slider,
+.slider > li {
+	display: block;
+	overflow: hidden;
+}
+
+.slider {margin: 0;}
+
+.slider > li {
+	width: 100%;
+	background: 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.slider > li > div {background-color: rgba(0,0,0,0.8);}
+
+.slider article {
+	padding: 0 2.5em;
+	background: url(../images/main-block.png) 100% 100% no-repeat;
+	padding-right: 300px;
+}
+
+.slider h2,
+.slider article {color: #fff;}
+
+.slider h2 {
+	font-size: 2em;
+	line-height: 1.5em;
+	padding: .5em 0 0;
+}
+
+/*
+.slider .mask {
+	background: url(../images/main-block.png) 0 0 no-repeat;
+	padding-left: 300px;
+}
+
+.slider .mask > div {
+	height: 285px;
+	overflow: hidden;
+	background: #fff;
+	padding: 0 1em;
+}
+
+.slider h2 {
+	font-size: 2em;
+	line-height: 1.3em;
+	margin: .5em 0;
+}*/
+
+.slider-nav {
+	text-align: center;
+	padding-top: .5em;
+}
+
+.slider-nav li {
+	display: inline-block;
+	padding: 0 .1em;
+}
+
+.slider-nav a {
+	display: block;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 1em;
+	height: 1em;
+	background: #e8e8e8;
+	border: 2px solid #ccc;
+}
+
+.slider-nav a:hover,
+.slider-nav a.active {
+	background: #fff;
+	border-color: #364050;
+}
+
+
+/* Section/Article */
+/* ----------------------------------------------------------------------------- */
+
+header {margin: 0 0 1em;}
+
+section,
+article {margin-bottom: 1em;}
+
+section > :last-child,
+article > :last-child {margin-bottom: 0;}
+
+section > .inner > :last-child,
+article > .inner > :last-child {margin-bottom: 0;}
+
+section:last-child,
+article:last-child {margin-bottom: 0;}
+
+/* Table */
+/* ----------------------------------------------------------------------------- */
+
+table {width: 100%;}
+
+table.default {}
+
+table.default tbody tr:nth-child(2n+2) {background: #f4f4f4;}
+
+table.default td {padding: 0.5em 1em 0.5em 1em;}
+
+table.default th {
+	text-align: left;
+	font-weight: 700;
+	padding: 0.75em 1em 0.75em 1em;
+}
+
+table.default thead {border-bottom: solid 1px #ddd;}
+
+table.default tfoot {
+	border-top: solid 1px #ddd;
+	background: #eee;
+}
+
+table.default tbody {}
+
+/* ***************************************************************************** */
+/* ***************************************************************************** */

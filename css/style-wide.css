@@ -1,0 +1,20 @@
+/* Basic                                                                         */
+/* ----------------------------------------------------------------------------- */
+
+body {min-width: 1200px;}
+
+body, input, textarea, select {font-size: 12pt;}
+
+/* Box */
+
+
+/* Content                                                                       */
+/* ----------------------------------------------------------------------------- */
+
+#content {padding: 6em 0;}
+
+/* Sidebar                                                                       */
+/* ----------------------------------------------------------------------------- */
+
+body.left-sidebar #content  {margin-left: 14em;}
+body.right-sidebar #content {margin-right: 14em;}

@@ -1,0 +1,11 @@
+<div class="inner">
+    <nav>
+        <ul class="post-nav">
+            <repeat group="{{ $data }}" value="{{ @item }}">
+                <li>
+                    <a href="{{ @item['path'] }}" class="{{ @page == @item['path'] ? 'active' : '' }}">{{ @item['text'] }}</a>
+                </li>
+            </repeat>
+        </ul>
+    </nav>
+</div>

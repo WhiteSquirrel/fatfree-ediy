@@ -1,0 +1,38 @@
+<section>
+
+    <ul id="slider" class="slider ">
+
+        <repeat group="{{ @mainposts }}" value="{{ @p }}">
+        <li style="background-image: url({{ @p.tn }});">
+            <div>
+            <article>
+                <div class="mask">
+                    <div>
+                        <header>
+                            <h2><a href="/post/{{ @p.ID }}">{{ @p.post_title }}</a></h2>
+                        </header>
+                        <p>
+                            {{ @p.post_content }}
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            </div>
+        </li>
+        </repeat>
+    </ul>
+    <div class="clear"></div>
+    <ul class="slider-nav">
+        <li><a href="#" class="active"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+    </ul>
+</section>

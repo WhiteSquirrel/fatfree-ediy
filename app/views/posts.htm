@@ -1,0 +1,39 @@
+<section class="posts">
+
+    <include href="navigation.htm" with="data={{ @content['navigation'] }}" />
+
+    <repeat group="{{ @content['data'] }}" value="{{ @post }}">
+    <div class="post">
+        <div class="inner">
+            <article>
+                <header>
+                    <h3><a href="/post{{ @post.post_name }}">{{ @post.post_title }}</a></h3>
+                </header>
+                <div class="info">
+                    <ul class="stats">
+                        <li class="date">
+                            <span class="day">{{ strftime('%d', strtotime(@post.post_date)) }}</span>
+                            <span class="month">{{ strftime('%B', strtotime(@post.post_date)) }}</span>
+                            <span class="year">{{ strftime('%G', strtotime(@post.post_date)) }}</span>
+                        </li>
+                        <li><a href="#" class="icon fa-comment">16</a></li>
+                        <li><a href="#" class="icon fa-heart">32</a></li>
+                        <li><a href="#" class="icon fa-twitter">64</a></li>
+                        <li><a href="#" class="icon fa-facebook">128</a></li>
+                    </ul>
+                </div>
+                <p>
+                    {{ @getPreview(@post.post_content) | raw }}
+                </p>
+            </article>
+        </div>
+    </div>
+    </repeat>
+
+    <div class="clear"></div>
+
+</section>
+
+<div class="clear"></div>
+
+<include href="pagination.htm" with="pagination={{ @content['pagination'] }}" />

@@ -1,0 +1,31 @@
+
+/* Basic                                                                         */
+/* ----------------------------------------------------------------------------- */
+
+body {min-width: 641px;}
+
+body, input, textarea, select {font-size: 14pt; }
+
+/* Nav                                                                           */
+/* ----------------------------------------------------------------------------- */
+
+#nav:before {display: none !important;}
+
+#nav li:hover a {background: none;}
+
+/* Content                                                                       */
+/* ----------------------------------------------------------------------------- */
+
+.toolbar {display:none;}
+
+/* Sidebar                                                                       */
+/* ----------------------------------------------------------------------------- */
+
+#sidebar {
+	background: none;
+	padding: 60px 0;
+	width: 275px;
+}
+
+body.left-sidebar #content  {margin-left:  0;}
+body.right-sidebar #content {margin-right: 0;}

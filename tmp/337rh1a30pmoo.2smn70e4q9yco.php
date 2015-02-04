@@ -1,1 +1,0 @@
-<div><?php echo var_dump($content['data']); ?></div>

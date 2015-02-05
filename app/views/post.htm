@@ -1,1 +1,25 @@
-<p> {{ @post.post_content  | raw }} </p>
+<div class="post">
+    <div class="inner">
+        <article>
+            <header>
+                <h3><a href="/post/{{ @content['data']['ID'] }}">{{ @content['data']['post_title'] }}</a></h3>
+            </header>
+            <div class="info">
+                <ul class="stats">
+                    <li class="date">
+                        <span class="day">{{ strftime('%d', strtotime(@content['data']['post_date'])) }}</span>
+                        <span class="month">{{ strftime('%B', strtotime(@content['data']['post_date'])) }}</span>
+                        <span class="year">{{ strftime('%G', strtotime(@content['data']['post_date'])) }}</span>
+                    </li>
+                    <li><a href="#" class="icon fa-comment">16</a></li>
+                    <li><a href="#" class="icon fa-heart">32</a></li>
+                    <li><a href="#" class="icon fa-twitter">64</a></li>
+                    <li><a href="#" class="icon fa-facebook">128</a></li>
+                </ul>
+            </div>
+            <p>
+                {{ @content['data']['post_content'] | raw }}
+            </p>
+        </article>
+    </div>
+</div>

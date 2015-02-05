@@ -43,26 +43,21 @@ class WPDataAccessor extends Prefab implements IDataAccessor {
     }
 
 
-    function getPosThumbnail($post_id){
-        $pthumb = $this->db->exec('select p.* from wp_postmeta pm, wp_posts p where pm.meta_key = \'_thumbnail_id\' and p.ID = pm.meta_value and p.post_type = \'attachment\' and pm.post_id=?'
-            ,array(1=>$post_id));
-        //TODO PROCESS ATTACH
-        return $pthumb;
+    function getPostThumbnail($post_id){
+        $thumbs = $this->db->exec('select p.guid from wp_postmeta pm, wp_posts p where pm.meta_key = "_thumbnail_id" and p.ID = pm.meta_value and p.post_type = "attachment" and pm.post_id = ?',array(1=>$post_id));
+        return $thumbs;
+    }
+
+    function getPosts2($postCategory = PostCategory::All, $skip = 0, $count = 10) {
+        $filter = $postCategory == PostCategory::All ? [] : ['post_category_slug = ?', $postCategory];
+        $posts = new PostAccessor($this->db);
+        return $posts->find($filter, ['offset' => $skip, 'limit' => $count]);
     }
 
     function getPosts($postCategory = PostCategory::All, $skip = 0, $count = 10) {
-        $filter = $postCategory == PostCategory::All ? [] : ['post_category_slug = ?', $postCategory];
-        $posts = new PostAccessor($this->db);
-        $foundPosts = $posts->find($filter, ['offset' => $skip, 'limit' => $count]);
-        foreach ( $foundPosts as $p) {
-            $t = $this->getPosThumbnail($p['ID']);
-            $p->tn = '';
-            if (!empty($t)) {
-                $p->tn = $t[0]["guid"];
-            }
-
-        }
-        return $foundPosts;
+        $filter = $postCategory == PostCategory::All ? [] : ['post_category_slug = ? and post_status=?', $postCategory, 'publish'];
+        $model = new \DB\SQL\Mapper($this->db, 'v_posts');
+        return $model->find($filter, ['order' => 'post_modified', 'offset' => $skip, 'limit' => $count]);
     }
 
 }

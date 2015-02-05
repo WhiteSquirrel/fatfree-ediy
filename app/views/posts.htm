@@ -7,7 +7,7 @@
         <div class="inner">
             <article>
                 <header>
-                    <h3><a href="/post{{ @post.post_name }}">{{ @post.post_title }}</a></h3>
+                    <h3><a href="/post/{{ @post.ID }}">{{ @post.post_title }}</a></h3>
                 </header>
                 <div class="info">
                     <ul class="stats">
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                 <p>
-                    {{ @getPreview(@post.post_content) | raw }}
+                    {{ @post.post_content | raw }}
                 </p>
             </article>
         </div>
@@ -35,5 +35,3 @@
 </section>
 
 <div class="clear"></div>
-
-<include href="pagination.htm" with="pagination={{ @content['pagination'] }}" />
